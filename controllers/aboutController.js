@@ -4,7 +4,7 @@ const { shopifyStorefront, shopifyAdmin } = require('../config/shopifyConfig');
 exports.getAboutInfo = async (req, res) => {
     const query = `
     {
-        files(first: 5) {
+        files(first: 15) {
             edges {
                 node {
                     ... on MediaImage {
@@ -20,7 +20,7 @@ exports.getAboutInfo = async (req, res) => {
     try {
         const response = await shopifyAdmin.post('/graphql.json', { query });
         const files = response.data.data.files.edges;
-        const stijnImage = files.find(edge => edge.node.image && edge.node.image.originalSrc.includes('stijn.jpg'));
+        const stijnImage = files.find(edge => edge.node.image && edge.node.image.originalSrc.includes('groepsfoto.jpg'));
 
         if (stijnImage) {
             res.json({ stijn_image_url: stijnImage.node.image.originalSrc });
