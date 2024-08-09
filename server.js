@@ -29,7 +29,7 @@ const corsOptions = {
   credentials: true,
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); // Apply CORS middleware
 app.use(bodyParser.json());
 
 // Your routes
@@ -37,8 +37,8 @@ const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
 const aboutRoutes = require("./routes/aboutRoutes");
 const logoRoutes = require("./routes/logoRoutes");
-const homeRoutes = require("./routes/homeRoutes")
-const orderRoutes = require("./routes/orderRoutes")
+const homeRoutes = require("./routes/homeRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
