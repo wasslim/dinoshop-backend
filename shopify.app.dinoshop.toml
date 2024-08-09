@@ -1,0 +1,20 @@
+client_id = "8c511e7d1c8f2798fd9d387f2ecc533a"
+name = "dinoshop"
+handle = "dinoshop"
+application_url = "https://dinoshop-backend.herokuapp.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+
+[access_scopes]
+scopes = "read_products,write_products,read_orders,write_orders,read_all_orders,read_customers,write_customers,read_inventory,write_inventory,read_fulfillments,write_fulfillments,read_analytics,read_marketing_events,write_marketing_events,read_price_rules,write_price_rules,read_discount_codes,write_discount_codes,read_shopify_payments_payouts,read_shopify_payments_disputes,read_shopify_payments_transactions,read_content,write_content,read_themes,write_themes,read_script_tags,write_script_tags,read_assigned_fulfillment_orders,write_assigned_fulfillment_orders,read_third_party_fulfillment_orders,write_third_party_fulfillment_orders,read_transactions,write_transactions,read_shipping,write_shipping,read_checkouts,write_checkouts,read_draft_orders,write_draft_orders,read_gift_cards,write_gift_cards,read_payment_gateways,write_payment_gateways,read_recurring_application_charges,write_recurring_application_charges,read_scripts,write_scripts,read_reports,write_reports,read_application_charges,write_application_charges,read_locations,write_locations,read_product_listings,write_product_listings"
+
+[auth]
+redirect_urls = [ "https://dinoshop-backend.herokuapp.com/api/auth/callback" ]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false
