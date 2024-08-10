@@ -7,7 +7,9 @@ const PORT = process.env.PORT || 3000;
 
 const allowedOrigins = [
   'http://localhost:3001', // Development URL
-  'https://your-production-frontend-domain.com' // Replace with your production frontend domain
+  'http://localhost:3000', // Additional local development URL
+  'https://your-production-frontend-domain.com', // Replace with your production frontend domain
+  'https://dinoshop-backend.herokuapp.com' // Heroku backend URL
 ];
 
 app.use(cors({
@@ -29,8 +31,8 @@ const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
 const aboutRoutes = require("./routes/aboutRoutes");
 const logoRoutes = require("./routes/logoRoutes");
-const homeRoutes = require("./routes/homeRoutes")
-const orderRoutes = require("./routes/orderRoutes")
+const homeRoutes = require("./routes/homeRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
