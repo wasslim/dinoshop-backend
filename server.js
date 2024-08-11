@@ -5,9 +5,10 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(bodyParser.json());
-
+// Configure CORS to allow requests from your frontend
+app.use(cors({
+  origin: 'http://localhost:3000', // Allow only your frontend's domain
+}));
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
 const aboutRoutes = require("./routes/aboutRoutes");
