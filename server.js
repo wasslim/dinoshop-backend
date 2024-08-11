@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // Apply CORS middleware
 app.use(cors({
-  origin: 'http://localhost:3000', // Allow requests from your frontend during development
+  origin: 'https://dinobier-shop-188140.netlify.app', // Allow requests from your frontend during development
   methods: 'GET,POST,PUT,DELETE', // Specify allowed methods
   credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 }));
