@@ -1,7 +1,6 @@
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -10,19 +9,6 @@ const allowedOrigins = [
   'https://your-production-frontend-domain.com' // Replace with your production frontend domain
 ];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  },
-  credentials: true,
-}));
-app.use(cors())
 
 app.use(bodyParser.json());
 
