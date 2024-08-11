@@ -4,12 +4,9 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const allowedOrigins = [
-  'http://localhost:3001', // Development URL
-  'https://your-production-frontend-domain.com' // Replace with your production frontend domain
-];
 
 
+app.use(cors());
 app.use(bodyParser.json());
 
 const productRoutes = require("./routes/productRoutes");
