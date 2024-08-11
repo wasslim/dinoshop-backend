@@ -22,10 +22,10 @@ app.use("/users", userRoutes);
 app.use("/about", aboutRoutes);
 app.use("/logo", logoRoutes);
 app.use("/home",homeRoutes)
+
 app.get('/test-cors', (req, res) => {
   res.json({ message: 'CORS is working!' });
 });
-
 
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
