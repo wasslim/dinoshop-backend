@@ -5,11 +5,10 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Apply CORS middleware
 app.use(cors({
-  origin: 'https://dinobier-shop-188140.netlify.app', // Allow requests from your frontend during development
-  methods: 'GET,POST,PUT,DELETE', // Specify allowed methods
-  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  origin: ['http://localhost:3000', 'https://dinobier-shop-188140.netlify.app', 'https://dinobier.be'],
+  methods: 'GET,POST,PUT,DELETE', 
+  credentials: true,
 }));
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
