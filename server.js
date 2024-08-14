@@ -15,12 +15,14 @@ const userRoutes = require("./routes/userRoutes");
 const aboutRoutes = require("./routes/aboutRoutes");
 const logoRoutes = require("./routes/logoRoutes");
 const homeRoutes = require("./routes/homeRoutes")
+const contactRoutes = require("./routes/contactRoutes")
 
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
 app.use("/about", aboutRoutes);
 app.use("/logo", logoRoutes);
 app.use("/home",homeRoutes)
+app.use("/contact",contactRoutes)
 
 app.get('/test-cors', (req, res) => {
   res.json({ message: 'CORS is working!' });
