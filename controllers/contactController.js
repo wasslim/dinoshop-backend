@@ -3,7 +3,7 @@ const { shopifyStorefront, shopifyAdmin } = require('../config/shopifyConfig');
 exports.getContact = async (req, res) => {
     const query = `
     {
-        files(first: 15) {
+        files(first: 38) {
             edges {
                 node {
                     ... on MediaImage {
